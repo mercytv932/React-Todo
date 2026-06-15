@@ -1,5 +1,5 @@
 import './App.css'
-import Todo from './Components/todo.jsx'
+import Todo from './Components/Todo.jsx'
 import Title from './Components/Title.jsx'
 import { useState } from 'react'
 
