@@ -1,17 +1,17 @@
 import './App.css'
-import Todo from './components/todo';
+import Todo from './Components/todo.jsx'
+import Title from './Components/Title.jsx'
+import { useState } from 'react'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-    
-    <h1>Todo</h1>
+    <Title/>
     <Todo/>
-
     </>
   )
 }
 
-export default App
+export default App;
