@@ -1,7 +1,9 @@
-function Todo(){
+function Todo({task, description}){
+  console.log(task);
    return(
     <div className="todo-item">
-      <h2>Todo Item</h2>
+      <h2>{ task }</h2>
+      <p>{ description }</p>
       <button>Delete</button>
     </div>
   )
