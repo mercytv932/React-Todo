@@ -9,9 +9,9 @@ function Popup({pop}){
       console.log("Confirm button is cliked");
     }}>Confirm</button>
 
-    <button className="popup__btn popup__btn--cancel" onClick={()=>{
+    <button className="popup__btn popup__btn--cancel" onClick={()=>
       console.log("cancel button is clicked!")
-    }}>
+    }>
       Cancel
     </button>
   </div>
