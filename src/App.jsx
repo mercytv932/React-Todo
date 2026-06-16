@@ -10,11 +10,17 @@ function App() {
 
   return (
     <>
+    <div>
+      <input type="text" onChange={(event)=>{
+        console.log(event.target.value)
+      }} />
+      <button>Add todo</button>
+    </div>
     <Title/>
-    <Todo task="Learn React" description = "Code along and take notes"/>
-    <Todo task="Finish ASAP Frontend" description = "3 hours everyday"/>
-    <Todo task="Land a junior job" description = "Apply for jobs 2 hours per day"/>
-    <Todo task="Make 100k per year" description = "Live life and relax"/>
+    <Todo task="Learn React"/>
+    <Todo task="Finish ASAP Frontend"/>
+    <Todo task="Land a junior job"/>
+    <Todo task="Make 100k per year"/>
     <Popup pop ="Are you sure?"/>
     </>
   )
