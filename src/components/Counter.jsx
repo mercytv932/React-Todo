@@ -7,7 +7,7 @@ function Counter(){
   return(
     <>
     <span>Counter:{count}</span>
-    <button onClick={()=> setCount(count+2)}>Increment</button>
+    <button onClick={()=> setCount(count+1)}>Increment</button>
     <button onClick={()=> setCount(count-1)}>Decrement</button>
     <button onClick={()=> setCount(0)}>Reset</button>
     
