@@ -6,7 +6,7 @@ import { useState } from 'react'
 
 
 function App() {
-  const [count, setCount] = useState(0)
+ const  [popupOpen, setPopupOpen] =  useState (false);
 
   return (
     <>
@@ -14,14 +14,14 @@ function App() {
       <input type="text" onChange={(event)=>{
         console.log(event.target.value)
       }} />
-      <button>Add todo</button>
+      <button onClick={()=> setPopupOpen(true)}>Add todo</button>
     </div>
     <Title/>
     <Todo task="Learn React"/>
     <Todo task="Finish ASAP Frontend"/>
     <Todo task="Land a junior job"/>
     <Todo task="Make 100k per year"/>
-    <Popup pop ="Are you sure?"/>
+    {popupOpen && <Popup pop ="Are you sure?"/>}
     </>
   )
 }
