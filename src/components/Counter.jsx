@@ -1,10 +1,15 @@
+import { useState } from "react";
+
 function Counter(){
+
+  const [count, setCount] = useState(0);
+
   return(
     <>
-    <span>Counter:0</span>
-    <button onClick={()=> console.log('add')}>Increment</button>
-    <button onClick={()=> console.log('minus')}>Decrement</button>
-    <button onClick={()=> console.log('reset')}>Reset</button>
+    <span>Counter:{count}</span>
+    <button onClick={()=> setCount(count+2)}>Increment</button>
+    <button onClick={()=> setCount(count-1)}>Decrement</button>
+    <button onClick={()=> setCount(0)}>Reset</button>
     
     
     </>
