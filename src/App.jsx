@@ -2,14 +2,20 @@ import './App.css'
 import Todo from './Components/Todo.jsx'
 import Title from './Components/Title.jsx'
 import Popup from './Components/Popup.jsx';
+import Counter from './Components/Counter.jsx';
 import { useState } from 'react'
 
 
+
 function App() {
+
  const  [popupOpen, setPopupOpen] =  useState (false);
+
 
   return (
     <>
+     <Counter/>
+{/* 
     <div>
       <input type="text" onChange={(event)=>{
         console.log(event.target.value)
@@ -21,7 +27,9 @@ function App() {
     <Todo task="Finish ASAP Frontend"/>
     <Todo task="Land a junior job"/>
     <Todo task="Make 100k per year"/>
-    {popupOpen && <Popup pop ="Are you sure?"/>}
+    {popupOpen && <Popup pop ="Are you sure?"/>} */}
+
+
     </>
   )
 }
