@@ -6,7 +6,7 @@ function Popup({pop}){
 
   <div className="popup__btns">
     <button className="popup__btn" onClick={()=>{
-      console.log("Confirm button is cliked");
+      console.log("Confirm button is clicked");
     }}>Confirm</button>
 
     <button className="popup__btn popup__btn--cancel" onClick={()=>
