@@ -11,6 +11,14 @@ function App() {
 
  const  [popupOpen, setPopupOpen] =  useState (false);
 
+ function togglePopup() {
+  setPopupOpen(true);
+  console.log("parent notfied")
+ }
+
+ function closePopup(){
+  setPopupOpen(false);
+ }
 
   return (
     <>
@@ -22,11 +30,11 @@ function App() {
       <button onClick={()=> setPopupOpen(true)}>Add todo</button>
     </div>
     <Title/>
-    <Todo task="Learn React"/>
-    <Todo task="Finish ASAP Frontend"/>
-    <Todo task="Land a junior job"/>
-    <Todo task="Make 100k per year"/>
-    {popupOpen && <Popup pop ="Are you sure?"/>} 
+    <Todo  togglePopup={togglePopup}  closePopup={closePopup} task="Learn React"/>
+    <Todo togglePopup={togglePopup} closePopup={closePopup} task="Finish ASAP Frontend"/>
+    <Todo togglePopup={togglePopup} closePopup={closePopup} task="Land a junior job"/>
+    <Todo  togglePopup={togglePopup} closePopup={closePopup} task="Make 100k per year"/>
+    {popupOpen && <Popup closePopup = {closePopup} title = "Are you sure?"/>} 
 
 
     </>
